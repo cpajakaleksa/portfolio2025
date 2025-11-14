@@ -336,14 +336,13 @@ footer {
     font-size: 2rem;
   }
 /* FORCE CROP FOR MAJMUN ANFAS ON HOME PAGE */
+/* PERFECT CROP FOR MAJMUN ANFAS ON HOME PAGE */
 .category img[src*="majmun anfas"] {
-  object-position: center 40% !important;
+  object-fit: cover !important;
+  object-position: center 12% !important;   /* adjusts the visible part */
   height: 360px !important;
-  transform: translateY(0px) !important;
+  transform: translateY(0) !important;      /* no forced shift */
 }
-
-}
-
 
 }
 
@@ -353,6 +352,12 @@ footer {
 }
 
 }
+
+
+}
+
+}
+
 
 
 
