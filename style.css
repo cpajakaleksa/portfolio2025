@@ -74,11 +74,13 @@ h1 {
 
 .category img {
   width: 100%;
-  height: auto;          /* important – remove forced horizontal crop */
-  aspect-ratio: 3/4;     /* vertical portrait shape */
+  height: auto;
+  aspect-ratio: 3/5;   /* slightly smaller vertically */
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
 }
 
 }
@@ -371,6 +373,7 @@ footer {
 }
 
 }
+
 
 
 
