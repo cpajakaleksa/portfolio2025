@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonework & Design – Aleksa Čpajak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Stonework & Design</h1>
+</header>
+
+<a href="index.html" class="nav-btn">Back to Main Page</a>
+<div class="gallery">
+  <img src="images/stonework/oblak.jpg" alt="">
+  <img src="images/stonework/groblje.jpg" alt="">
+  <img src="images/stonework/oblak1.jpg" alt="">
+  <img src="images/stonework/oblak3.jpg" alt="">
+  <img src="images/stonework/oblak4.jpg" alt="">
+  <img src="images/stonework/mermer zemun.jpg" alt="">
+  <img src="images/stonework/mermer zemun2.jpg" alt="">
+  <img src="images/stonework/sto boulder.jpg" alt="">
+<img src="images/stonework/sto boulder2.jpeg" alt="">
+<img src="images/stonework/hemida.jpg" alt="">
+</div>
+
+<footer>
+  <p>Belgrade, Serbia • <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
+<!-- LIGHTBOX for Stonework -->
+<div id="lightbox"></div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const galleryImages = Array.from(document.querySelectorAll('.gallery img'));
+  let currentIndex = -1;
+
+  function showImage(index) {
+    if (index < 0 || index >= galleryImages.length) return;
+    currentIndex = index;
+    lightbox.classList.add('active');
+    const img = document.createElement('img');
+    img.src = galleryImages[index].src;
+    while (lightbox.firstChild) lightbox.removeChild(lightbox.firstChild);
+    lightbox.appendChild(img);
+  }
+
+  galleryImages.forEach((image, index) => {
+    image.addEventListener('click', () => showImage(index));
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return;
+    lightbox.classList.remove('active');
+  });
+</script>
+</body>
+</html>
