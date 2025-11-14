@@ -335,5 +335,11 @@ footer {
   .about-header h1 {
     font-size: 2rem;
   }
+}/* FORCE majmun anfas to crop high on MAIN PAGE */
+.category img[alt*="Clay"] {
+  object-position: 50% -15% !important;  /* moves picture upward */
+  transform: translateY(-40px) !important;
 }
+
+
 
