@@ -3,56 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conceptual Sculptures – Aleksa ?pajak</title>
+  <title>Conceptual Sculptures â€“ Aleksa Cpajak</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Conceptual Sculptures</h1>
+  <a href="index.html" class="nav-btn">Back to Main Page</a>
 </header>
 
-<a href="index.html" class="nav-btn">Back to Main Page</a>
-<div class="gallery">
-  <img src="images/conceptual/kocka inox.jpg" alt="">
-  <img src="images/conceptual/kocka mesing.jpg" alt="">
-  <img src="images/conceptual/wasp.jpg" alt="">
-<img src="images/conceptual/caletova.JPG" alt="">
-<img src="images/conceptual/konj1.jpg" alt="">
-<img src="images/conceptual/konj2.jpg" alt="">
-</div>
+<main>
+  <div class="gallery">
+    <img src="images/conceptual/kocka inox.jpg" alt="Stainless steel cube sculpture">
+    <img src="images/conceptual/kocka mesing.jpg" alt="Brass cube sculpture">
+    <img src="images/conceptual/wasp.jpg" alt="Wasp concept sculpture">
+    <img src="images/conceptual/caletova.JPG" alt="Caletova sculpture">
+    <img src="images/conceptual/konj1.jpg" alt="Horse sculpture 1">
+    <img src="images/conceptual/konj2.jpg" alt="Horse sculpture 2">
+  </div>
+</main>
 
 <footer>
-  <p>Belgrade, Serbia • <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
+  <p>Belgrade, Serbia â€¢ <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
 </footer>
 
-</body>
-</html>
-<!-- LIGHTBOX for Conceptual -->
 <div id="lightbox"></div>
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const galleryImages = Array.from(document.querySelectorAll('.gallery img'));
-  let currentIndex = -1;
 
-  function showImage(index) {
-    if (index < 0 || index >= galleryImages.length) return;
-    currentIndex = index;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById('lightbox');
+  const images = document.querySelectorAll('.gallery img');
+
+  function showImage(i) {
     lightbox.classList.add('active');
-    const img = document.createElement('img');
-    img.src = galleryImages[index].src;
-    while (lightbox.firstChild) lightbox.removeChild(lightbox.firstChild);
-    lightbox.appendChild(img);
+    lightbox.innerHTML = `<img src="${images[i].src}">`;
   }
 
-  galleryImages.forEach((image, index) => {
-    image.addEventListener('click', () => showImage(index));
-  });
+  images.forEach((img, i) =>
+    img.addEventListener('click', () => showImage(i))
+  );
 
-  lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove('active');
-  });
+  lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+});
 </script>
+
 </body>
 </html>
