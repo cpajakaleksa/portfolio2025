@@ -348,22 +348,29 @@ footer {
   object-fit: cover;
   object-position: 50% 22%;     /* head + shoulders centered */
 }
-
+/* === FORCE FIX MAJMUN ANFAS HOME PAGE COVER === */
+img[src*="majmun anfas"] {
+  height: 360px !important;
+  object-fit: cover !important;
+  object-position: 50% 25% !important;
 }
 
 }
 
 }
 
-
-}
-
 }
 
 
 }
 
 }
+
+
+}
+
+}
+
 
 
 
