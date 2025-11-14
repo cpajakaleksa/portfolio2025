@@ -321,7 +321,41 @@ h1 {
   .about-header h1 {
     font-size: 2rem !important;
   }
+/* ===== MOBILE ABOUT PAGE FIX ===== */
+@media (max-width: 768px) {
 
+  /* stack portrait ABOVE the text */
+  .about {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  /* portrait bigger on mobile */
+  .about .portrait {
+    width: 90%;
+    max-width: 360px;
+    border-radius: 12px;
+  }
+
+  /* text bigger on mobile */
+  .about .bio {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-top: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  /* center the header */
+  .about-header p,
+  .about-header a {
+    text-align: center;
+  }
+
+  /* fix intro background spacing */
+  .intro {
+    padding: 1.5rem !important;
+  }
 }
 
 }
@@ -335,6 +369,9 @@ h1 {
 }
 
 }
+
+}
+
 
 
 
