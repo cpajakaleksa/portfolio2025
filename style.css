@@ -163,54 +163,39 @@ h1 {
 /* ================================================
    ABOUT PAGE
 ================================================ */
-.about-header {
-  text-align: center;
-  padding: 3rem 1rem 1rem;
-}
-
-.about-header h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #111;
-}
-
-.about-header h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #000;
-  margin: 0.6rem auto 0;
-  border-radius: 3px;
-}
-
+/* ===== ABOUT PAGE ===== */
 .about {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 2.5rem;
   justify-content: center;
-  flex-wrap: wrap;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  max-width: 950px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 1000px;
   margin: 3rem auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
 
+/* BIGGER PORTRAIT */
 .about .portrait {
-  width: 280px;
-  border-radius: 10px;
+  width: 340px;
+  border-radius: 12px;
+  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* BIGGER TEXT */
 .about .bio {
-  max-width: 550px;
-  font-size: 1.15rem;
-  line-height: 1.8;
+  max-width: 580px;
+  font-size: 1.25rem;
+  line-height: 1.85;
+  color: #222;
+  font-weight: 400;
 }
+
 
 /* ================================================
    UNIVERSAL BUTTON (BACK + ABOUT)
@@ -276,7 +261,31 @@ h1 {
     background: rgba(255, 255, 255, 0.65);
   }
 }
+/* ===== MOBILE ABOUT PAGE ===== */
+@media (max-width: 768px) {
 
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .about .portrait {
+    width: 85%;
+    max-width: 360px;
+    margin: 0 auto 1.8rem;
+  }
+
+  .about .bio {
+    font-size: 1.35rem;   /* MUCH more readable */
+    line-height: 1.9;
+    padding: 0 0.3rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
 }
 
 }
@@ -288,5 +297,8 @@ h1 {
 }
 
 }
+
+}
+
 
 
