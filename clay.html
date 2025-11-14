@@ -3,57 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clay & Modelling – Aleksa Čpajak</title>
+  <title>Clay & Modelling – Aleksa Cpajak</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>Clay & Modelling</h1>
+  <a href="index.html" class="nav-btn">Back to Main Page</a>
 </header>
 
-<a href="index.html" class="nav-btn">Back to Main Page</a>
-<div class="gallery">
-  <img src="images/clay/majmun anfas.jpg" alt="majmun anfas" class="clay-hero">
-  <img src="images/clay/majmun profil.jpg" alt="">
-  <img src="images/clay/krok1.jpg" alt="">
-  <img src="images/clay/krok2.jpg" alt="">
-  <img src="images/clay/krok3.jpg" alt="">
-  <img src="images/clay/krok4.jpg" alt="">
-  <img src="images/clay/krok5.jpg" alt="">
-  <img src="images/clay/palma.jpg" alt="">
-  <img src="images/clay/palma 2.jpg" alt="">
-  <img src="images/clay/tagora bronza.jpg" alt="">
-  <img src="images/clay/tagora gips.jpg" alt="">
-  <img src="images/clay/vanja.jpg" alt="">
-  <img src="images/clay/vins.jpg" alt="">
-<img src="images/clay/divna.jpg" alt="">
-</div>
+<main>
+  <div class="gallery">
+    <img src="images/clay/majmun anfas.jpg" alt="Chimpanzee portrait in clay">
+    <img src="images/clay/majmun profil.jpg" alt="Chimpanzee profile in clay">
+    <img src="images/clay/krok1.jpg" alt="">
+    <img src="images/clay/krok2.jpg" alt="">
+    <img src="images/clay/krok3.jpg" alt="">
+    <img src="images/clay/krok4.jpg" alt="">
+    <img src="images/clay/krok5.jpg" alt="">
+    <img src="images/clay/palma.jpg" alt="">
+    <img src="images/clay/palma 2.jpg" alt="">
+    <img src="images/clay/tagora bronza.jpg" alt="">
+    <img src="images/clay/tagora gips.jpg" alt="">
+    <img src="images/clay/vanja.jpg" alt="">
+    <img src="images/clay/vins.jpg" alt="">
+    <img src="images/clay/divna.jpg" alt="">
+  </div>
+</main>
 
 <footer>
-  <p>Belgrade, Serbia � <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
+  <p>Belgrade, Serbia • <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
 </footer>
 
-<!-- LIGHTBOX HTML + SCRIPT -->
 <div id="lightbox"></div>
-<script>
-  const lightbox = document.getElementById('lightbox');
-  document.querySelectorAll('.gallery img').forEach(image => {
-    image.addEventListener('click', () => {
-      lightbox.classList.add('active');
-      const img = document.createElement('img');
-      img.src = image.src;
-      while (lightbox.firstChild) {
-        lightbox.removeChild(lightbox.firstChild);
-      }
-      lightbox.appendChild(img);
-    });
-  });
 
-  lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove('active');
-  });
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById('lightbox');
+  const images = document.querySelectorAll('.gallery img');
+
+  function showImage(i) {
+    lightbox.classList.add('active');
+    lightbox.innerHTML = `<img src="${images[i].src}">`;
+  }
+
+  images.forEach((img, i) =>
+    img.addEventListener('click', () => showImage(i))
+  );
+
+  lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+});
 </script>
+
 </body>
 </html>
