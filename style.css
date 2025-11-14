@@ -340,6 +340,13 @@ footer {
   object-position: 50% -15% !important;  /* moves picture upward */
   transform: translateY(-40px) !important;
 }
+/* FORCE CROP FOR MAJMUN ANFAS ON HOME PAGE */
+.category img[src*="majmun anfas"] {
+  object-position: center top !important;   /* show head + shoulders */
+  height: 360px !important;                 /* slightly taller for better crop */
+  transform: translateY(-35px) !important;  /* move visible area upward */
+}
+
 
 
 
