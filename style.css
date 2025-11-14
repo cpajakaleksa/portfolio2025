@@ -354,22 +354,39 @@ img[src*="majmun anfas"] {
   object-fit: cover !important;
   object-position: 50% 25% !important;
 }
-
+/* === DESKTOP FIX FOR MAJMUN ANFAS COVER === */
+@media (min-width: 769px) {
+  img[src*="majmun anfas"] {
+    height: 360px !important;
+    object-fit: cover !important;
+    object-position: 50% 10% !important; /* moves view UP */
+  }
+}
+/* === DESKTOP FIX FOR MAJMUN ANFAS COVER === */
+@media (min-width: 769px) {
+  img[src*="majmun anfas"] {
+    height: 360px !important;
+    object-fit: cover !important;
+    object-position: 50% 10% !important; /* moves view UP */
+  }
 }
 
 }
 
 }
 
-
-}
-
 }
 
 
 }
 
 }
+
+
+}
+
+}
+
 
 
 
