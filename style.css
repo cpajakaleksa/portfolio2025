@@ -335,40 +335,6 @@ footer {
   .about-header h1 {
     font-size: 2rem;
   }
-/* FIX MAJMUN ANFAS COVER ON HOME PAGE */
-.category img[src$="majmun anfas.jpg"] {
-  object-fit: cover !important;
-  object-position: 50% 18% !important;   /* HEAD + SHOULDERS centered */
-  height: 360px !important;
-}
-/* Special crop for the MAJMUN ANFAS cover on home page */
-.cover-clay {
-  width: 100%;
-  height: 360px;                /* a bit taller card */
-  object-fit: cover;
-  object-position: 50% 22%;     /* head + shoulders centered */
-}
-/* === FORCE FIX MAJMUN ANFAS HOME PAGE COVER === */
-img[src*="majmun anfas"] {
-  height: 360px !important;
-  object-fit: cover !important;
-  object-position: 50% 25% !important;
-}
-/* === DESKTOP FIX FOR MAJMUN ANFAS COVER === */
-@media (min-width: 769px) {
-  img[src*="majmun anfas"] {
-    height: 360px !important;
-    object-fit: cover !important;
-    object-position: 50% 10% !important; /* moves view UP */
-  }
-}
-/* === DESKTOP FIX FOR MAJMUN ANFAS COVER === */
-@media (min-width: 769px) {
-  img[src*="majmun anfas"] {
-    height: 360px !important;
-    object-fit: cover !important;
-    object-position: 50% 10% !important; /* moves view UP */
-  }
 /* === DESKTOP FIX FOR MAJMUN ANFAS COVER — moved slightly down === */
 @media (min-width: 769px) {
   img[src*="majmun anfas"] {
@@ -384,6 +350,10 @@ img[src*="majmun anfas"] {
 
 }
 
+  }
+}
+
+}
 
 }
 
@@ -393,6 +363,12 @@ img[src*="majmun anfas"] {
 }
 
 }
+
+
+}
+
+}
+
 
 
 
