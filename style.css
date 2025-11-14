@@ -347,6 +347,15 @@ footer {
     object-fit: cover !important;
     object-position: 50% 18% !important; /* moved DOWN slightly */
   }
+   /* ===== TALLER GALLERY IMAGES ON MOBILE ===== */
+@media (max-width: 768px) {
+  .gallery img {
+    height: 300px !important;   /* default was 190px — now shows more of image */
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
 }
 
 }
@@ -373,6 +382,7 @@ footer {
 }
 
 }
+
 
 
 
