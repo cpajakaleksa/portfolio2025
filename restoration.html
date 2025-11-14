@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restoration & Conservation – Aleksa Čpajak</title>
+  <title>Restoration & Conservation – Aleksa Cpajak</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1>Restoration & Conservation</h1>
+  <a href="index.html" class="nav-btn">Back to Main Page</a>
 </header>
 
-<a href="index.html" class="nav-btn">Back to Main Page</a>
-<div class="gallery">
+<main>
+  <div class="gallery">
     <img src="images/restoration/domgardesjeban.jpg" alt="">
     <img src="images/restoration/domgardesjebandva.jpg" alt="">
     <img src="images/restoration/domgardevonjikgotov.jpg" alt="">
@@ -27,45 +28,32 @@
     <img src="images/restoration/francuska6.jpg" alt="">
     <img src="images/restoration/studenica1.jpg" alt="">
     <img src="images/restoration/studenica2.jpg" alt="">
-    
-</div>
-
+  </div>
+</main>
 
 <footer>
   <p>Belgrade, Serbia • <a href="mailto:cpajakaleksa@gmail.com">cpajakaleksa@gmail.com</a></p>
 </footer>
 
-</body>
-</html>
-<!-- LIGHTBOX for Restoration -->
 <div id="lightbox"></div>
-<script>
-  const lightbox = document.getElementById('lightbox');
-  const galleryImages = Array.from(document.querySelectorAll('.gallery img'));
-  let currentIndex = -1;
 
-  function showImage(index) {
-    if (index < 0 || index >= galleryImages.length) return;
-    currentIndex = index;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById('lightbox');
+  const images = document.querySelectorAll('.gallery img');
+
+  function showImage(i) {
     lightbox.classList.add('active');
-    const img = document.createElement('img');
-    img.src = galleryImages[index].src;
-    while (lightbox.firstChild) lightbox.removeChild(lightbox.firstChild);
-    lightbox.appendChild(img);
+    lightbox.innerHTML = `<img src="${images[i].src}">`;
   }
 
-  galleryImages.forEach((image, index) => {
-    image.addEventListener('click', () => showImage(index));
-  });
+  images.forEach((img, i) =>
+    img.addEventListener('click', () => showImage(i))
+  );
 
-  lightbox.addEventListener('click', e => {
-    if (e.target !== e.currentTarget) return;
-    lightbox.classList.remove('active');
-  });
+  lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+});
 </script>
+
 </body>
-
 </html>
-
-
-
