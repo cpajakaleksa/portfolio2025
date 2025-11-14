@@ -369,6 +369,13 @@ img[src*="majmun anfas"] {
     object-fit: cover !important;
     object-position: 50% 10% !important; /* moves view UP */
   }
+/* === DESKTOP FIX FOR MAJMUN ANFAS COVER — moved slightly down === */
+@media (min-width: 769px) {
+  img[src*="majmun anfas"] {
+    height: 360px !important;
+    object-fit: cover !important;
+    object-position: 50% 18% !important; /* moved DOWN slightly */
+  }
 }
 
 }
@@ -386,6 +393,7 @@ img[src*="majmun anfas"] {
 }
 
 }
+
 
 
 
