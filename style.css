@@ -335,20 +335,19 @@ footer {
   .about-header h1 {
     font-size: 2rem;
   }
-}/* FORCE majmun anfas to crop high on MAIN PAGE */
-.category img[alt*="Clay"] {
-  object-position: 50% -15% !important;  /* moves picture upward */
-  transform: translateY(-40px) !important;
-}
 .category img[src*="majmun anfas"] {
-  object-position: 50% -3% !important;   /* was -8% → now just a tiny lift */
+  object-position: 50% 2% !important;     /* moved DOWN a tiny bit */
   height: 360px !important;
-  transform: translateY(-12px) !important; /* softer upward push */
+  transform: translateY(-5px) !important; /* much smaller upward push */
 }
 
 }
 
+
 }
+
+}
+
 
 
 
