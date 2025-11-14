@@ -92,8 +92,10 @@ h1 {
 
 /* Clay cover tweak (majmun) */
 .cover-clay {
-  object-position: 50% 5% !important;
-  transform: translateY(-15px);
+  object-position: 50% 0% !important; /* highest possible */
+  transform: translateY(-35px);       /* pulls crop even higher */
+}
+
 }
 
 /* =========================================================
@@ -334,3 +336,4 @@ footer {
     font-size: 2rem;
   }
 }
+
