@@ -335,11 +335,15 @@ footer {
   .about-header h1 {
     font-size: 2rem;
   }
+/* FORCE CROP FOR MAJMUN ANFAS ON HOME PAGE */
 .category img[src*="majmun anfas"] {
-  object-position: 50% -35% !important;   /* big upward shift */
+  object-position: center 40% !important;
   height: 360px !important;
-  transform: translateY(-25px) !important; /* lift slightly */
+  transform: translateY(0px) !important;
 }
+
+}
+
 
 }
 
@@ -349,6 +353,7 @@ footer {
 }
 
 }
+
 
 
 
