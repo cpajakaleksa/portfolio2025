@@ -341,12 +341,15 @@ footer {
   transform: translateY(-40px) !important;
 }
 .category img[src*="majmun anfas"] {
-  object-position: 50% -8% !important;   /* was -20% → now less extreme */
+  object-position: 50% -3% !important;   /* was -8% → now just a tiny lift */
   height: 360px !important;
-  transform: translateY(-25px) !important; /* was -55px → softer upward push */
+  transform: translateY(-12px) !important; /* softer upward push */
 }
 
 }
+
+}
+
 
 
 
